@@ -1,1 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Paytone+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Share Tech", ui-sans-serif, system-ui, sans-serif;
+  --font-paytone: "Paytone One", ui-sans-serif, system-ui, sans-serif;
+  --font-playfair: "Playfair", ui-serif, system-ui, serif;
+}
