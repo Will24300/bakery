@@ -3,13 +3,14 @@ import bg from "../assets/bg.png";
 function Hero() {
   return (
     <nav
-      className="bg-cover bg-center bg-no-repeat w-full h-screen text-white"
+      className="relative w-full h-screen text-white bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className="flex justify-center items-center">
+      <div className="absolute inset-0 bg-[linear-gradient(273deg,rgba(255,255,255,0.15)_0%,rgba(0,0,0,0.65)_100%)] bg-blend-multiply pointer-events-none" />
+      <div className="relative z-10 flex justify-center items-center">
         <h1 className="font-paytone text-4xl font-500 mt-5">bakery</h1>
       </div>
-      <div className="w-[38.12%] h-[49.71%] ml-[8.40%] mt-[8.79%]">
+      <div className="relative z-10 w-[38.12%] h-[49.71%] ml-[8.40%] mt-[8.79%]">
         <h1 className="font-playfair font-bold text-[64px] leading-tight">
           HANDMADE BAKED GOODS AND COOKIES
         </h1>
