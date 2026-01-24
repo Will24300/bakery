@@ -1,4 +1,10 @@
+import { welcomeApi } from "../context/imagesApi";
+
 function Welcome() {
+  //   const res = images.map((i, index) => {
+  //     console.log(i.welcome.image[1]);
+  //   });
+
   return (
     <section className="my-10 mx-25">
       <div className="flex justify-between items-center gap-20">
@@ -12,6 +18,14 @@ function Welcome() {
           make every moment sweeter.Join us on a journey of taste and tradition,
           where every bite is a moment to savor.
         </p>
+      </div>
+      <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-x-15">
+        {welcomeApi.map((i) => (
+          <div key={i.id}>
+            <img src={i.image} alt="welcome img" className="rounded" />
+            <p className="pt-7 text-[#5B5856]">{i.description}</p>
+          </div>
+        ))}
       </div>
     </section>
   );
