@@ -1,10 +1,6 @@
 import { welcomeApi } from "../context/imagesApi";
 
 function Welcome() {
-  //   const res = images.map((i, index) => {
-  //     console.log(i.welcome.image[1]);
-  //   });
-
   return (
     <section className="my-10 mx-25">
       <div className="flex justify-between items-center gap-20">
