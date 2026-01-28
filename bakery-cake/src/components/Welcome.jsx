@@ -2,8 +2,8 @@ import { welcomeApi } from "../context/imagesApi";
 
 function Welcome() {
   return (
-    <section className="my-10 mx-25">
-      <div className="flex justify-between items-center gap-20">
+    <section className="my-10 mx-10 lg:mx-25">
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-5 lg:gap-20">
         <h2 className="font-bold w-5/5 text-[40px]">
           Welcoming You At Our bakery
         </h2>
@@ -18,7 +18,11 @@ function Welcome() {
       <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-x-15">
         {welcomeApi.map((i) => (
           <div key={i.id}>
-            <img src={i.image} alt="welcome img" className="rounded" />
+            <img
+              src={i.image}
+              alt="welcome img"
+              className="rounded mt-5 lg:mt-0"
+            />
             <p className="pt-7 text-[#5B5856]">{i.description}</p>
           </div>
         ))}

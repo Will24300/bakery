@@ -5,16 +5,16 @@ import { ArrowRight } from "lucide-react";
 function Hero() {
   return (
     <nav
-      className="relative w-full h-[80vh] lg:h-screen text-white bg-cover bg-center bg-no-repeat"
+      className="relative w-full h-[80vh] md:h-[50vh] lg:h-screen text-white bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${bg})` }}
     >
       <div className="absolute inset-0 bg-[linear-gradient(273deg,rgba(255,255,255,0.15)_0%,rgba(0,0,0,0.65)_100%)] bg-blend-multiply pointer-events-none" />
       <div className="relative z-10 flex justify-between items-center px-10 py-5">
-        <h1 className="font-paytone text-2xl lg:text-4xl font-500 cursor-pointer">
+        <h1 className="font-paytone text-2xl md:text-4xl lg:text-4xl font-500 cursor-pointer">
           bakery
         </h1>
         <div className="flex justify-center items-center">
-          <ShoppingCart size={25} lg:size={34} className="cursor-pointer" />
+          <ShoppingCart size={25} className="cursor-pointer" />
           <button className="bg-yellow-900  cursor-pointer px-3 lg:px-7 py-1.5 rounded ml-5">
             Login
           </button>
