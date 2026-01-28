@@ -3,8 +3,8 @@ import { welcomeApi } from "../context/imagesApi";
 function Welcome() {
   return (
     <section className="my-10 mx-10 lg:mx-25">
-      <div className="flex flex-col lg:flex-row justify-between items-center gap-5 lg:gap-20">
-        <h2 className="font-bold w-5/5 text-[40px]">
+      <div className="flex flex-col lg:flex-row justify-between items-center gap-5 lg:gap-20 ">
+        <h2 className="font-bold w-5/5 text-[40px] ">
           Welcoming You At Our bakery
         </h2>
         <p className="text-[18px] text-justify">
