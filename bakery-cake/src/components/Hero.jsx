@@ -14,8 +14,8 @@ function Hero() {
           bakery
         </h1>
         <div className="flex justify-center items-center">
-          <ShoppingCart size={25} className="cursor-pointer" />
-          <button className="bg-[#814A22]  cursor-pointer px-3 lg:px-7 py-1.5 rounded ml-5">
+          <ShoppingCart size={26} className="cursor-pointer" />
+          <button className="bg-[#814A22]  cursor-pointer px-3 lg:px-7 py-1.5 rounded ml-7">
             Login
           </button>
         </div>
