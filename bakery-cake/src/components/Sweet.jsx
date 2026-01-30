@@ -13,7 +13,7 @@ function Sweet() {
   ];
 
   return (
-    <section className="bg-[#9e7151] h-screen my-20 text-white">
+    <section className="bg-[#814A22] h-screen my-20 text-white">
       <div className="flex justify-between items-center p-15">
         <div className="w-1/3">
           <h2 className="font-playfair font-bold text-4xl">
@@ -35,17 +35,26 @@ function Sweet() {
           ))}
         </div>
       </div>
-      <div className="grid grid-cols-5 gap-5 px-5 mt-10">
+      <div className="grid grid-cols-5 gap-5 px-10 ">
         {bakeryCategories[0].products.map((item) => (
-          <div key={item.id}>
-            <img src={item.img} alt={item.name} />
-            <div>
-              <p>${item.price}</p>
-              <h2>{item.name}</h2>
+          <div key={item.id} className="bg-[#FFE1BC] text-black rounded">
+            <div className="relative flex justify-center items-center h-48">
+              <div className="bg-[#E3B071] rounded-full h-4/5 w-4/5 absolute opacity-10 z-0"></div>
+              <img src={item.img} alt={item.name} className="w-3/4 z-10" />
             </div>
-            <div>
-              <Info size={12} />
-              <button>Add</button>
+            <div className="flex justify-between items-center px-5 py-3">
+              <div className="w-3/4">
+                <p className="text-[#5B5856]">${item.price}.00</p>
+                <h2 className="font-playfair text-[20px] font-semibold leading-7 mt-3">
+                  {item.name}
+                </h2>
+              </div>
+              <div className="flex flex-col gap-3 justify-center items-center">
+                <Info size={14} className="cursor-pointer" />
+                <button className="text-white bg-[#F3A446] text-[14px] px-3 cursor-pointer rounded">
+                  Add
+                </button>
+              </div>
             </div>
           </div>
         ))}
