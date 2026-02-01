@@ -14,12 +14,12 @@ function Sweet() {
 
   return (
     <section className="bg-[#814A22] h-auto my-20 pb-20 text-white">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-4 md:p-15 gap-4 max-w-full overflow-hidden">
-        <div className="md:w-1/3">
-          <h2 className="font-playfair font-bold text-3xl md:text-4xl">
+      <div className="flex flex-col lg:flex-row md:flex-col justify-between items-start md:items-center p-4 md:p-5 gap-4 max-w-full overflow-hidden">
+        <div className="lg:w-1/3 md:mb-10 pt-10">
+          <h2 className="font-playfair font-bold text-3xl md:text-5xl text-start md:text-center">
             The Sweet We Make
           </h2>
-          <p className="text-sm md:text-md mt-3 font-thin">
+          <p className="text-sm md:text-md mt-3 font-thin ml-2">
             Experience the artistry of our chef's hands, crafting divine sweet
             cakes from simple ingredients.
           </p>
