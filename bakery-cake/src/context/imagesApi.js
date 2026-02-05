@@ -6,6 +6,15 @@ import cookieImg from "../assets/cookie.png";
 import puffPastryImg from "../assets/puff.png";
 import bagelImg from "../assets/bagel.png";
 import baguetteImg from "../assets/baguette.png";
+import cakeChoc from "../assets/cakes/chocolate.png";
+import cakeVan from "../assets/cakes/vanilla.png";
+import cakeVel from "../assets/cakes/redVelvet.png";
+import cakeCar from "../assets/cakes/carrot.png";
+import cookieChoc from "../assets/cookies/chocolate.png";
+import cookieOat from "../assets/cookies/oatmeal.png";
+import cookieSug from "../assets/cookies/sugar.png";
+import cookiePean from "../assets/cookies/peanuts.png";
+import breadBag from "../assets/breads/baguette.png";
 
 export const welcomeApi = [
   {
@@ -69,25 +78,25 @@ export const bakeryCategories = [
     products: [
       {
         id: 1,
-        img: "/images/cake-1.jpg",
+        img: cakeChoc,
         name: "Chocolate Fudge Cake",
         price: 28.0,
       },
       {
         id: 2,
-        img: "/images/cake-2.jpg",
+        img: cakeVan,
         name: "Vanilla Bean Cake",
         price: 24.0,
       },
       {
         id: 3,
-        img: "/images/cake-3.jpg",
+        img: cakeVel,
         name: "Red Velvet Cake",
         price: 26.0,
       },
       {
         id: 4,
-        img: "/images/cake-4.jpg",
+        img: cakeCar,
         name: "Carrot Cake",
         price: 22.0,
       },
@@ -98,25 +107,25 @@ export const bakeryCategories = [
     products: [
       {
         id: 1,
-        img: "/images/cookie-1.jpg",
+        img: cookieChoc,
         name: "Chocolate Chip Cookies",
         price: 5.0,
       },
       {
         id: 2,
-        img: "/images/cookie-2.jpg",
+        img: cookieOat,
         name: "Oatmeal Raisin Cookies",
         price: 4.5,
       },
       {
         id: 3,
-        img: "/images/cookie-3.jpg",
+        img: cookieSug,
         name: "Sugar Cookies",
         price: 4.0,
       },
       {
         id: 4,
-        img: "/images/cookie-4.jpg",
+        img: cookiePean,
         name: "Peanut Butter Cookies",
         price: 4.5,
       },
@@ -133,7 +142,7 @@ export const bakeryCategories = [
       },
       {
         id: 2,
-        img: "/images/bread-2.jpg",
+        img: breadBag,
         name: "Baguette",
         price: 6.0,
       },
