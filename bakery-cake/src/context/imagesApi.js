@@ -14,7 +14,10 @@ import cookieChoc from "../assets/cookies/chocolate.png";
 import cookieOat from "../assets/cookies/oatmeal.png";
 import cookieSug from "../assets/cookies/sugar.png";
 import cookiePean from "../assets/cookies/peanuts.png";
+import breadSour from "../assets/breads/sourdough.png";
 import breadBag from "../assets/breads/baguette.png";
+import breadWheat from "../assets/breads/wheatBread.png";
+import breadRye from "../assets/breads/rye.png";
 
 export const welcomeApi = [
   {
@@ -136,7 +139,7 @@ export const bakeryCategories = [
     products: [
       {
         id: 1,
-        img: "/images/bread-1.jpg",
+        img: breadSour,
         name: "Sourdough Bread",
         price: 8.0,
       },
@@ -148,13 +151,13 @@ export const bakeryCategories = [
       },
       {
         id: 3,
-        img: "/images/bread-3.jpg",
+        img: breadWheat,
         name: "Whole Wheat Bread",
         price: 7.5,
       },
       {
         id: 4,
-        img: "/images/bread-4.jpg",
+        img: breadRye,
         name: "Rye Bread",
         price: 8.5,
       },
