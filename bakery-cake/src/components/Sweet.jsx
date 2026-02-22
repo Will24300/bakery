@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { bakeryCategories } from "../context/imagesApi";
-import { Info, Pointer } from "lucide-react";
+import { Info } from "lucide-react";
+
 function Sweet() {
   const types = [
     "All",
@@ -11,6 +13,15 @@ function Sweet() {
     "Muffins",
     "Cupcakes",
   ];
+
+  const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(0);
+
+  // Function to get products based on selected category
+  const getDisplayedProducts = () => {
+    return bakeryCategories[selectedCategoryIndex]?.products || [];
+  };
+
+  const displayedProducts = getDisplayedProducts();
 
   return (
     <section className="bg-[#814A22] h-auto my-20 pb-20 text-white">
@@ -25,7 +36,7 @@ function Sweet() {
           </p>
         </div>
 
-        {/* Scrollable tabs */}
+        {/* Scrollable tabs with click handlers */}
         <div
           className="w-full md:w-auto flex gap-3 bg-white text-black rounded-2xl px-2 py-2
                overflow-x-auto overflow-y-hidden whitespace-nowrap
@@ -34,8 +45,13 @@ function Sweet() {
           {types.map((t, i) => (
             <p
               key={i}
-              className={`py-1.5 px-4 rounded-2xl cursor-pointer shrink-0
-          ${i === 0 ? "bg-[#F3A446] text-white" : "bg-white"}`}
+              onClick={() => setSelectedCategoryIndex(i)}
+              className={`py-1.5 px-4 rounded-2xl cursor-pointer shrink-0 transition-colors duration-300
+                ${
+                  selectedCategoryIndex === i
+                    ? "bg-[#F3A446] text-white"
+                    : "bg-white hover:bg-gray-100"
+                }`}
             >
               {t}
             </p>
@@ -43,14 +59,15 @@ function Sweet() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-x-7 gap-y-10 px-10 py-10">
-        {bakeryCategories[0].products.map((item, index) => (
+      {/* Products Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-x-12 gap-y-10 px-10 py-10">
+        {displayedProducts.map((item, index) => (
           <div
             key={item.id}
             className={`bg-[#FFE1BC] text-black rounded cursor-pointer 
-        overflow-hidden
-        hover:scale-105 transition-transform duration-500 ease-in-out
-        ${index % 2 !== 0 ? "lg:translate-y-10" : ""}`}
+              overflow-hidden
+              hover:scale-105 transition-transform duration-500 ease-in-out
+              ${index % 2 !== 0 ? "lg:translate-y-10" : ""}`}
           >
             {/* Image container */}
             <div className="relative flex justify-center items-center h-48 overflow-hidden my-4">
@@ -81,6 +98,13 @@ function Sweet() {
           </div>
         ))}
       </div>
+
+      {/* Optional: Show message if no products */}
+      {displayedProducts.length === 0 && (
+        <div className="text-center text-white py-10">
+          No products found in this category.
+        </div>
+      )}
     </section>
   );
 }
